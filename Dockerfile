@@ -30,7 +30,10 @@ RUN apt-get update -y
 RUN apt-get install -y squid
 
 COPY entry.sh /
+COPY squid.conf /etc/squid/squid.conf
 RUN chmod a+x /entry.sh
+
+RUN htpasswd -c /etc/squid/passwd "${USERNAME}" "${PASSWORD}"
 
 EXPOSE 3128/tcp
 
