@@ -14,11 +14,11 @@ $ docker pull yegor256/squid-proxy
 Then, you run it:
 
 ```
-$ docker run --name proxy -d --restart=always --publish 3128:3128 \
+$ docker run --name proxy -d --restart=always --publish 8081:3128 \
   -e USERNAME=jeffrey -e PASSWORD=swordfish \
   yegor256/squid-proxy
 ```
 
-Now you can connect to `localhost:3128` with `jeffrey:swordfish` credentials.
+Now you can connect to `localhost:8081` with `jeffrey:swordfish` credentials.
 
 Here is how you [install](https://docs.docker.com/install/) Docker.
