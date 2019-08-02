@@ -21,4 +21,4 @@ $ docker run --name proxy -d --restart=always --publish 3128:3128 \
 Here is how you [install](https://docs.docker.com/install/) Docker.
 
 
-docker run --name proxy --publish 3128:3128 5662db089d1a
+docker run --name proxy --publish 3128:3128 896dc02cd6ad

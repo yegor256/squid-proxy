@@ -26,8 +26,10 @@ LABEL Description="Squid forward proxy with authorization" Vendor="Yegor Bugayen
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update
+RUN apt-get update -y
 RUN apt-get install -y squid
+
+COPY entry.sh /
 
 EXPOSE 3128/tcp
 
