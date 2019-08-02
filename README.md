@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/total/squid-proxy/master/LICENSE.txt)
+
 This Docker image helps you start your own [Squid](http://www.squid-cache.org/) proxy server, with
 [HTTP Basic authorization](https://en.wikipedia.org/wiki/Basic_access_authentication).
 You may need this if you want your crawling/scaping software
