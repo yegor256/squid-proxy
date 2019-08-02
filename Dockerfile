@@ -33,4 +33,4 @@ COPY entry.sh /
 
 EXPOSE 3128/tcp
 
-ENTRYPOINT ["/entry.sh"]
+# ENTRYPOINT ["/entry.sh"]
