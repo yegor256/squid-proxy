@@ -23,7 +23,6 @@
 FROM ubuntu:18.04
 MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
 LABEL Description="Squid forward proxy with authorization" Vendor="Yegor Bugayenko" Version="0.1"
-WORKDIR /tmp
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -32,4 +31,4 @@ RUN apt-get install -y squid
 
 EXPOSE 3128/tcp
 
-ENTRYPOINT ["/tmp/entry.sh"]
+ENTRYPOINT ["/entry.sh"]
