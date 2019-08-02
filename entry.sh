@@ -14,4 +14,4 @@ fi
 
 htpasswd -cb /etc/squid/passwd "${USERNAME}" "${PASSWORD}"
 
-/etc/init.d/squid start
+exec $(which squid) -NYCd 1
