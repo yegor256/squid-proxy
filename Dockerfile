@@ -30,6 +30,7 @@ RUN apt-get update -y
 RUN apt-get install -y squid
 
 COPY entry.sh /
+RUN chmod a+x /entry.sh
 
 EXPOSE 3128/tcp
 
