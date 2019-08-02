@@ -7,12 +7,15 @@ go everywhere through an explicit HTTP(S) proxy.
 First, you pull it:
 
 ```bash
+$ docker pull yegor256/squid-proxy
 ```
 
 Then, you run it:
 
 ```
 $ docker run --name proxy -d --restart=always --publish 3128:3128 \
-  -e
+  -e USERNAME=jeffrey -e PASSWORD=swordfish \
   yegor256/squid-proxy
 ```
+
+Here is how you [install](https://docs.docker.com/install/) Docker.
