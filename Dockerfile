@@ -29,6 +29,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 RUN apt-get install -y squid
-RUN apt-get
 
 EXPOSE 3128/tcp
+
+ENTRYPOINT ["/tmp/entry.sh"]
