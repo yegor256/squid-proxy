@@ -24,4 +24,8 @@ $ docker run --name proxy -d --restart=always --publish 8081:3128 \
 
 Now you can connect to `localhost:8081` with `jeffrey:swordfish` credentials.
 
+BTW, the proxy is [anonymous](https://en.wikipedia.org/wiki/Anonymizer).
+Once it's up and running, you can check whether it's visible,
+[here](http://amibehindaproxy.com/).
+
 Here is how you [install](https://docs.docker.com/install/) Docker.
