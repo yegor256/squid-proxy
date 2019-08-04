@@ -1,3 +1,4 @@
+[![Docker Build Status](https://img.shields.io/docker/build/yegor256/squid-proxy)](https://cloud.docker.com/repository/docker/yegor256/squid-proxy)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/total/squid-proxy/master/LICENSE.txt)
 
 This [Docker](https://www.docker.com/)
