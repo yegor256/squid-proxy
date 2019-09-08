@@ -12,7 +12,7 @@ go everywhere through an explicit HTTP(S) proxy.
 First, you [pull it](https://hub.docker.com/r/yegor256/squid-proxy):
 
 ```bash
-$ docker pull yegor256/squid-proxy
+$ docker pull yegor256/squid-proxy:0.1
 ```
 
 Then, you run it:
@@ -20,7 +20,7 @@ Then, you run it:
 ```
 $ docker run --name proxy -d --restart=always --publish 8081:3128 \
   -e USERNAME=jeffrey -e PASSWORD=swordfish \
-  yegor256/squid-proxy
+  yegor256/squid-proxy:0.1
 ```
 
 Now you can connect to `localhost:8081` with `jeffrey:swordfish` credentials.
