@@ -1,4 +1,4 @@
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/yegor256/squid-proxy)](https://cloud.docker.com/repository/docker/yegor256/squid-proxy/builds)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/yegor256/squid-proxy)](https://hub.docker.com/r/yegor256/squid-proxy)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/total/squid-proxy/master/LICENSE.txt)
 
 This [Docker](https://www.docker.com/)
@@ -9,7 +9,7 @@ to look like constantly going to the Network from the same IP address. You
 rent a VPS, start a Squid server there and configure your software to
 go everywhere through an explicit HTTP(S) proxy.
 
-First, you [pull it](https://cloud.docker.com/repository/docker/yegor256/squid-proxy):
+First, you [pull it](https://hub.docker.com/r/yegor256/squid-proxy):
 
 ```bash
 $ docker pull yegor256/squid-proxy
