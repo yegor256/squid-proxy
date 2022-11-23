@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
 LABEL Description="Squid forward proxy with authorization" Vendor="Yegor Bugayenko" Version="0.1"
 
