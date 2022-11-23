@@ -1,0 +1,11 @@
+---
+name: docker
+on:
+  push:
+  pull_request:
+jobs:
+  docker:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build . -t home
