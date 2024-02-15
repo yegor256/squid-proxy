@@ -1,5 +1,5 @@
 docker:
-  image: yegor256/rultor-image:1.13.0
+  image: yegor256/rultor-image:1.22.0
 assets:
   docker-password: yegor256/home#assets/docker-password
 release:
