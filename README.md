@@ -18,9 +18,41 @@ $ docker run --name proxy --detach --restart=always --publish 8081:3128 \
   yegor256/squid-proxy
 ```
 
-Now you can connect to `localhost:8081` with `jeffrey:swordfish` credentials.
+Or, you can use docker compose:
+
+```yaml
+version: '3'
+services:
+  proxy:
+    image: yegor256/squid-proxy
+    restart: always
+    ports:
+      - "8081:3128"
+    environment:
+      - USERNAME=jeffrey
+      - PASSWORD=swordfish
+```
+
+Now you can connect to `localhost:8081` with `jeffrey:swordfish` credentials. For example:
+
+```shell
+curl -vvv --proxy http://jeffrey:swordfish@0.0.0.0:8081 https://google.com/
+```
 
 BTW, the proxy is [anonymous](https://en.wikipedia.org/wiki/Anonymizer).
 Once it's up and running, you can check whether it's visible,
 [here](http://amibehindaproxy.com/). It also doesn't store any logs and doesn't
 cache any content.
+
+
+## Developing
+
+```shell
+docker build . -t squid-proxy:latest
+```
+
+Want to push to a local machine?
+
+```shell
+docker save squid-proxy | ssh -C your@machine docker load
+```
