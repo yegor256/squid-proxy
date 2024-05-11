@@ -23,10 +23,12 @@
 FROM ubuntu:24.04
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
 
-RUN apt-get update -y
-RUN apt-get install -y squid
-RUN apt-get install -y apache2-utils
-RUN apt-get clean
+RUN apt-get update -y --fix-missing \
+  && apt-get -y install --no-install-recommends \
+    squid=6.6-1ubuntu5 \
+    apache2-utils=2.4.58-1ubuntu8.1 \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 COPY entry.sh /
 COPY squid.conf /etc/squid/squid.conf
