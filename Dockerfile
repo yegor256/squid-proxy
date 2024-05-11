@@ -20,11 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM ubuntu:24.04
-MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
-LABEL Description="Squid forward proxy with authorization" Vendor="Yegor Bugayenko" Version="0.1"
-
-ENV DEBIAN_FRONTEND=noninteractive
+FROM ubuntu:22.04
+LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
 
 RUN apt-get update -y
 RUN apt-get install -y squid
