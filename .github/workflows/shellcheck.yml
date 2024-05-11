@@ -20,13 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: docker
-on:
+name: shellcheck
+'on':
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
 jobs:
-  docker:
+  shellcheck:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - run: docker build . -t home
+      - uses: ludeeus/action-shellcheck@master

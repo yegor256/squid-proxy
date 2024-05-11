@@ -27,13 +27,14 @@ set -e
 
 if [ -z "${USERNAME}" ]; then
   echo "You have to specify the -e USERNAME=... argument"
-  exit
+  exit 1
 fi
+
 if [ -z "${PASSWORD}" ]; then
   echo "You have to specify the -e PASSWORD=... argument"
-  exit
+  exit 1
 fi
 
 htpasswd -cb /etc/squid/passwd "${USERNAME}" "${PASSWORD}"
 
-exec $(which squid) -NYCd 1
+exec "$(which squid)" -NYCd 1

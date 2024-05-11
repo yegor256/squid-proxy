@@ -20,13 +20,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: docker
-on:
+name: markdown-lint
+'on':
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
+    paths-ignore: ['paper/**', 'sandbox/**']
+concurrency:
+  group: markdown-lint-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  docker:
+  markdown-lint:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - run: docker build . -t home
+      - uses: articulate/actions-markdownlint@v1

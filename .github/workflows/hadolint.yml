@@ -20,13 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: docker
-on:
+name: hadolint
+'on':
   push:
   pull_request:
 jobs:
-  docker:
+  hadolint:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - run: docker build . -t home
+      - uses: hadolint/hadolint-action@v3.1.0
