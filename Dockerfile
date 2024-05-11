@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
 
 RUN apt-get update -y
