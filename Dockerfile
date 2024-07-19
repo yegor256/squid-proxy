@@ -22,6 +22,7 @@
 
 FROM ubuntu:24.04
 
+LABEL repository="https://github.com/yegor256/squid-proxy"
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
 LABEL version="0.0.0"
 
