@@ -21,7 +21,9 @@
 # SOFTWARE.
 
 FROM ubuntu:24.04
+
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
+LABEL version="0.0.0"
 
 RUN apt-get update -y --fix-missing \
   && apt-get -y install --no-install-recommends \
