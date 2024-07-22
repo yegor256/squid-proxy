@@ -40,9 +40,9 @@ jobs:
           images: |
             yegor256/squid-proxy
           tags: |
-            type=raw,value=latest,enable=${
-              { github.ref == format('refs/heads/{0}', 'master') }
-            }
+            type=raw,
+            value=latest,
+            enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
