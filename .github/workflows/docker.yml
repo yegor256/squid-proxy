@@ -39,7 +39,7 @@ jobs:
         with:
           images: |
             yegor256/squid-proxy
-          # yamllint disable-line-length
+          # yamllint disable rule:line-length
           tags: |
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
             type=ref,event=branch
@@ -47,7 +47,7 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=sha
-          # yamllint enable-line-length
+          # yamllint enable rule:line-length
 
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
