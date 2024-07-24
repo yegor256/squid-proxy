@@ -29,7 +29,7 @@ LABEL version="0.0.0"
 RUN apt-get update -y --fix-missing \
   && apt-get -y install --no-install-recommends \
     squid=6.6-1ubuntu5 \
-    apache2-utils=2.4.58-1ubuntu8.1 \
+    apache2-utils=2.4.58-1ubuntu8 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 

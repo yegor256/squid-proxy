@@ -43,6 +43,12 @@ credentials. For example:
 curl -vvv --proxy http://jeffrey:swordfish@0.0.0.0:8081 https://google.com/
 ```
 
+Or, with httpie:
+
+```shell
+http --proxy=http:http://jeffrey:swordfish@0.0.0.0:8081 https://google.com/
+```
+
 BTW, the proxy is [anonymous](https://en.wikipedia.org/wiki/Anonymizer).
 Once it's up and running, you can check whether it's visible,
 [here](http://amibehindaproxy.com/). It also doesn't store any logs and doesn't
