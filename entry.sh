@@ -37,4 +37,6 @@ fi
 
 htpasswd -cb /etc/squid/passwd "${USERNAME}" "${PASSWORD}"
 
+rm -f /run/squid.pid
+
 exec "$(which squid)" -NYCd 1
