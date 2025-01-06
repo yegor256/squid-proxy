@@ -43,7 +43,7 @@ credentials. For example:
 curl -vvv --proxy http://jeffrey:swordfish@0.0.0.0:8081 https://google.com/
 ```
 
-Or, with httpie:
+Or, with [httpie](https://httpie.io/):
 
 ```shell
 http --proxy=http:http://jeffrey:swordfish@0.0.0.0:8081 https://google.com/
