@@ -21,7 +21,7 @@ $ docker run --name proxy --detach --restart=always --publish 8081:3128 \
   yegor256/squid-proxy
 ```
 
-Or, you can use docker compose:
+You can also use [Docker compose](https://docs.docker.com/compose/):
 
 ```yaml
 version: '3'
