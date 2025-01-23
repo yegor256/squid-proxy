@@ -21,7 +21,7 @@
 # SOFTWARE.
 ---
 name: docker
-on:
+'on':
   push:
   pull_request:
 
