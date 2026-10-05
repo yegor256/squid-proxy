@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2019-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 LABEL repository="https://github.com/yegor256/squid-proxy"
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
