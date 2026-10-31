@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2019-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 LABEL repository="https://github.com/yegor256/squid-proxy"
 LABEL maintainer="Yegor Bugayenko <yegor256@gmail.com>"
@@ -9,8 +9,8 @@ LABEL version="0.0.0"
 
 RUN apt-get update -y --fix-missing \
   && apt-get -y install --no-install-recommends \
-    squid=6.6-1ubuntu5 \
-    apache2-utils=2.4.58-1ubuntu8 \
+    squid=7.7-0ubuntu0.26.04.1 \
+    apache2-utils=2.4.66-2ubuntu2.6 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
